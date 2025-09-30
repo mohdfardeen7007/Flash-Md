@@ -231,6 +231,9 @@ module.exports = [
             if (!participants.length) {
                 return await king.sendMessage(jid, { text: "⚠️ No participants found in this group." }, { quoted: msg });
             }
+            let groupName = groupInfo.subject || "Unknown Group";
+        let totalMembers = participants ? participants.length : 0;
+        if (totalMembers === 0) return reply("❌ No members found in this group.")
 
             const customText = args.length > 0 ? args.join(' ') : 'Hello everyone!';
             let mentionText = `*📣 ${customText}*\n\n`;
