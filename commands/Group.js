@@ -235,7 +235,7 @@ module.exports = [
             const customText = args.length > 0 ? args.join(' ') : '𝐖α𝗄𝖾 𝐔ρ 𝐄𝗏𝖾𝗋𝗒ⱺ𐓣𝖾!';
             let mentionText = `*━ ✦ ⃞🏴‍☠️ ${customText}*\n\n`;
             participants.forEach((p, i) => {
-                mentionText += `${i + 1 ━ ✦ ⃞🥮ᩧᩙᩪᩩ̶̷  ͟ ͟ ͟ ͟}. @${p.id.split('@')[0]}\n`;
+                mentionText += `${i + 1}. ━ ✦ ⃞🥮ᩧᩙᩪᩩ̶̷  ͟ ͟ ͟ ͟. @${p.id.split('@')[0]}\n`;
             });
 
             await king.sendMessage(jid, {
