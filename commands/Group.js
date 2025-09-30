@@ -233,7 +233,7 @@ module.exports = [
             }
 
             const customText = args.length > 0 ? args.join(' ') : 'Hello everyone!';
-            let mentionText = `*📣 ${customText}*\n\n`;
+            let mentionText = *` 📌 *Name :* ${groupName}\n` `👥 *Members:* ${totalMembers}\n``🛡️ *Admins (${admins.length}):*\n${adminList.join('\n')}`📣 ${customText}*\n\n`;
             participants.forEach((p, i) => {
                 mentionText += `${i + 1}. @${p.id.split('@')[0]}\n`;
             });
