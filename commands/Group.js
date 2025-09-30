@@ -232,7 +232,11 @@ module.exports = [
                 return await king.sendMessage(jid, { text: "⚠️ No participants found in this group." }, { quoted: msg });
             }
 
-            let mentionText = *` 📌 *Name :* ${groupName}\n` `👥 *Members:* ${totalMembers}\n``🛡️ *Admins (${admins.length}):*\n${adminList.join('\n')}`📣 ${customText}*\n\n`;
+            const customText = args.length > 0 ? args.join(' ') : 'Hello everyone!';
+            let mentionText =  `📌 *Name:* ${groupName}\n\n` `*📣 ${customText}*\n\n`;
+            participants.forEach((p, i) => {
+                mentionText += `${i + 1}. @${p.id.split('@')[0]}\n`;
+            });
 
             await king.sendMessage(jid, {
                 text: mentionText,
