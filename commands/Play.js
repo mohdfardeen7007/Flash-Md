@@ -50,7 +50,7 @@ module.exports = [
       const message = {
         image: { url: video.thumbnail },
         caption:
-          `*FLASH-MD SONG PLAYER*\n\n` +
+          `*𝐅𝖾ᥣ𝗂𝗑 𝐏ᥣα𝗒𝖾𝗋*\n\n` +
           `╭───────────────◆\n` +
           `│⿻ *Title:* ${video.title}\n` +
           `│⿻ *Duration:* ${video.timestamp}\n` +
@@ -59,15 +59,6 @@ module.exports = [
           `│⿻ *Channel:* ${video.author.name}\n` +
           `╰────────────────◆\n\n` +
           `🔗 ${video.url}`,
-        contextInfo: {
-          forwardingScore: 1,
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363238139244263@newsletter',
-            newsletterName: 'FLASH-MD',
-            serverMessageId: -1
-          }
-        }
       };
 
       await king.sendMessage(fromJid, message, { quoted: msg });
@@ -75,17 +66,6 @@ module.exports = [
       await king.sendMessage(fromJid, {
         audio: { url: data.downloadLink },
         mimetype: 'audio/mpeg',
-        fileName,
-        contextInfo: {
-          forwardingScore: 1,
-          isForwarded: true,
-          forwardedNewsletterMessageInfo: {
-            newsletterJid: '120363238139244263@newsletter',
-            newsletterName: 'FLASH-MD',
-            serverMessageId: -1
-          }
-        },
-        caption: 'FLASH-MD V2'
       }, { quoted: msg });
 
     } catch (err) {
