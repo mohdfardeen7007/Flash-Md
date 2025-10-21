@@ -42,14 +42,6 @@ npm start
 ``` 
 ---
 
-### 🙏 Credits & Licensing
-
-| **Contributor** | **Role** |
-|------------------|----------|
-| [Baileys](https://github.com/WhiskeySockets/Baileys) | Core WhatsApp Web API Library |
-| [FranceKing1](https://github.com/franceking1) | Developer & Maintainer of FLASH-MD-V2 |
-
----
 
 ### ⚠️ Warning
 
